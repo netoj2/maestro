@@ -1,0 +1,21 @@
+appId: com.qazandoqafood      # Pacote do aplicativo
+---
+- launchApp                    # Abrir o Aplicativo 
+- tapOn:
+    id: "email"                # Clicar em um id
+- tapOn: "email"               # Clicar em um texto
+- assertVisible: "E-mail"      # Verificar se esta visivel
+- inputText: teste@tex         # Digitar um campo
+- scroll                       # So scrolla a tela
+- scrollUntilVisible: 
+    element: "NomeDoElemento"    # Vai escrolar ate o texto 
+    direction: DOWN              # direcao que vai ser feita o scroll
+- repeat:                       # Como se fosse o FOR, vai rodar o comando definido o numero de vezes informado
+    times: 3
+    commands:
+        - tapOn: "login-button"
+- repeat:                          # While, repete até que atinja alguma consição
+    while:
+        notVisible: "ValueX"        # Não visivel, para usar o visivel é o "assertVisible"
+    commands:
+        - tapOn: "login-button"
