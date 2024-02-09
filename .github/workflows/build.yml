@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      imagem: docker.io/cypress/browsers
+      image: docker.io/cypress/browsers
 
       steps:
         - name: Checkout code
