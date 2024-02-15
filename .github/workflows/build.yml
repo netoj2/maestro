@@ -11,6 +11,7 @@ jobs:
     container:
       image: docker.io/cypress/browsers
     steps:
+      - echo "Teste"
       - name: Checkout code
         uses: actions/checkout@v2
 
